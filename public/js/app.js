@@ -1,24 +1,23 @@
-var myArray = [3,4,1,2];
-
 function bubbleSort(arr){
+  var bubbledArr = arr;
   var isSwapped = false;
   var count = 0;
 
   while(!isSwapped) {
     isSorted = false;
-    count++;
-    for(var i = 0; i < arr.length; i++){
-      var curr = arr[i];
-      var next = arr[i + 1];
+    for(var i = 0; i < bubbledArr.length -1; i++){
+      var curr = bubbledArr[i];
+      var next = bubbledArr[i + 1];
       var moves = 0;
       if (curr > next) {
-        arr[i] = next;
-        arr[i + 1] = curr;
-        moves++;
+        bubbledArr[i] = next;
+        bubbledArr[i + 1] = curr;
+        moves++
+        count += moves;
       }
     }
     if (moves === 0){
-      isSorted = true;
+      isSwapped = true;
     }
   }
   return count;
