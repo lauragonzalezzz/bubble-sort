@@ -30,14 +30,16 @@ Array.prototype.bubbleSort = function(arr){
 
   while(!isSwapped) {
     isSorted = false;
+      var moves = 0;
     for(var i = 0; i < bubbledArr.length -1; i++){
       var curr = bubbledArr[i];
       var next = bubbledArr[i + 1];
-      var moves = 0;
       if (curr > next) {
         bubbledArr[i] = next;
         bubbledArr[i + 1] = curr;
         moves++
+        console.log('bubbledArr',bubbledArr);
+        console.log('moves',moves);
       }
     }
     if (moves === 0){

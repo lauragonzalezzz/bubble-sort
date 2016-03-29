@@ -39,7 +39,7 @@ describe('Extra Bubble Sort', function() {
 
     it('should return a new array', function(){
       var myArr5 = [5,4,3,2,1];
-      expect(Array.prototype.bubbleSort(myArr5)).to.equal([1,2,3,4,5]);
+      expect(Array.prototype.bubbleSort(myArr5)).to.deep.equal([1,2,3,4,5]);
   });
 
 });
