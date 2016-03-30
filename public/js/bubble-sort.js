@@ -7,10 +7,10 @@ function bubbleSort(arr){
 
   while(!isSwapped) {
     isSorted = false;
+      var moves = 0;
     for(var i = 0; i < bubbledArr.length -1; i++){
       var curr = bubbledArr[i];
       var next = bubbledArr[i + 1];
-      var moves = 0;
       if (curr > next) {
         bubbledArr[i] = next;
         bubbledArr[i + 1] = curr;
@@ -22,7 +22,7 @@ function bubbleSort(arr){
       isSwapped = true;
     }
   }
-  return count;
+  return bubbledArr;
 };
 
 // Array method function
@@ -50,3 +50,7 @@ Array.prototype.bubbleSort = function(){
 };
 
 
+// var contentDiv = document.getElementById('content');
+// var arrayOutput = document.createElement('div');
+// arrayOutput.innerHTML = bubbleSort([5,4,3,2,1]);
+// contentDiv.appendChild(arrayOutput);
