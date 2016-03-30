@@ -23,8 +23,9 @@ function bubbleSort(arr){
   return count;
 };
 
+
+
 Array.prototype.bubbleSort = function(arr){
-  console.log('this',this);
   var bubbledArr = arr;
   var isSwapped = false;
 
@@ -38,8 +39,6 @@ Array.prototype.bubbleSort = function(arr){
         bubbledArr[i] = next;
         bubbledArr[i + 1] = curr;
         moves++
-        console.log('bubbledArr',bubbledArr);
-        console.log('moves',moves);
       }
     }
     if (moves === 0){

@@ -37,9 +37,15 @@ describe('Extra Bubble Sort', function() {
     expect(Array.prototype).to.have.property('bubbleSort').that.is.a('function');
   });
 
-    it('should return a new array', function(){
-      var myArr5 = [5,4,3,2,1];
-      expect(Array.prototype.bubbleSort(myArr5)).to.deep.equal([1,2,3,4,5]);
+  it('should return a new array', function(){
+    var myArr5 = [5,4,3,2,1];
+    expect(Array.prototype.bubbleSort(myArr5)).to.deep.equal([1,2,3,4,5]);
   });
+
+  // it('should be able to be called directly as an array method', function(){
+  //   am = new Array;
+  //   am.arr = [3,2,1];
+  //   expect(am.bubbleSort()).to.deep.equal([1,2,3]);
+  // });
 
 });
