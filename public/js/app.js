@@ -1,3 +1,5 @@
+// Regular function
+
 function bubbleSort(arr){
   var bubbledArr = arr;
   var isSwapped = false;
@@ -23,21 +25,20 @@ function bubbleSort(arr){
   return count;
 };
 
+// Array method function
 
-
-Array.prototype.bubbleSort = function(arr){
-  var bubbledArr = arr;
+Array.prototype.bubbleSort = function(){
   var isSwapped = false;
 
   while(!isSwapped) {
     isSorted = false;
       var moves = 0;
-    for(var i = 0; i < bubbledArr.length -1; i++){
-      var curr = bubbledArr[i];
-      var next = bubbledArr[i + 1];
+    for(var i = 0; i < this.length -1; i++){
+      var curr = this[i];
+      var next = this[i + 1];
       if (curr > next) {
-        bubbledArr[i] = next;
-        bubbledArr[i + 1] = curr;
+        this[i] = next;
+        this[i + 1] = curr;
         moves++
       }
     }
@@ -45,5 +46,7 @@ Array.prototype.bubbleSort = function(arr){
       isSwapped = true;
     }
   }
-  return bubbledArr;
+  return this;
 };
+
+
