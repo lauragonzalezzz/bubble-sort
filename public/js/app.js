@@ -1,9 +1,7 @@
-var myArray = [4,3,2,1];
+var myArray = [4,3,2,1,5,6];
 
 var contentDiv = document.getElementById('content');
 var arrayOutput = document.createElement('div');
-arrayOutput.innerHTML = bubbleSort(myArray);
-contentDiv.appendChild(arrayOutput);
 
 var sortButton = document.createElement('button');
 sortButton.innerHTML = 'Sort';
@@ -16,8 +14,13 @@ function createArrayBars(arr){
     indvBar.classList.add('indvBar');
     indvBar.innerHTML = arr[i];
     barsDiv.appendChild(indvBar);
-
   }
 };
 createArrayBars(myArray);
 
+// arrayOutput.innerHTML = bubbleSort(myArray);
+// contentDiv.appendChild(arrayOutput);
+
+setInterval(function(){
+  bubbleSort(myArray);
+}, 1000);
