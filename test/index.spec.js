@@ -1,7 +1,7 @@
 var fs = require('fs');
 var vm = require('vm');
 var chai = require('chai');
-var functionsFile = fs.readFileSync(process.cwd() + '/public/js/app.js');
+var functionsFile = fs.readFileSync(process.cwd() + '/public/js/bubble-sort.js');
 vm.runInThisContext(functionsFile); // file runs and it's contents has access to GLOBAL
 
 var expect = chai.expect;
