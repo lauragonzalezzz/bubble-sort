@@ -3,7 +3,9 @@ function quickSort(arr){
     var pivot = arr[0];
     var leftArr = [];
     var rightArr = [];
-
+    if (arr.length === 0) {
+      return [];
+    }
 // Base Case
     if (arr.length === 1){
       return arr;
@@ -19,9 +21,8 @@ function quickSort(arr){
     };
     leftArr = quickSort(leftArr);
     rightArr = quickSort(rightArr);
-
     return leftArr.concat(pivot, rightArr);
 
 }; //End of quickSort
 
-console.log(quickSort([2,1,5,3,1,7,0]));
+console.log(quickSort([3,2,1]));
