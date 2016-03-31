@@ -13,4 +13,11 @@ describe('Quick Sort', function(){
     expect(quickSort).to.be.a('function');
   });
 
+  it('should return an array', function(){
+    expect(quickSort()).to.be.an('array');
+  });
+
+  // it('should return a sorted array', function(){
+  //   expect(quickSort()).to.be.an('array');
+  // });
 });
