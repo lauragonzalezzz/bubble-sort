@@ -24,5 +24,3 @@ function quickSort(arr){
     return leftArr.concat(pivot, rightArr);
 
 }; //End of quickSort
-
-console.log(quickSort([3,2,1]));
