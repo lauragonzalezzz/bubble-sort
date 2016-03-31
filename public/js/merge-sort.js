@@ -33,8 +33,7 @@ function mergeSort(arr){
 
 function arrMerge(left, right){
   var result = [];
-console.log('left',left);
-console.log('right',right);
+
   while (left.length > 0 && right.length > 0){
     if (left[0] <= right[0]){
       var lshifted = left.shift();
@@ -54,8 +53,7 @@ console.log('right',right);
     var r2shifted = right.shift();
     result.push(r2shifted);
   };
-  console.log('result',result);
+
   return result;
 
 };
-mergeSort([123,1,45,15,454,12,1,0]);
