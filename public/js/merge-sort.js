@@ -21,6 +21,7 @@ function mergeSort(arr){
       rightArr.push(arr[i]);
     };
   };
+
 // Recurse and Sort Left and Right Arrays
   leftArr = mergeSort(leftArr);
   rightArr = mergeSort(rightArr);
@@ -58,5 +59,3 @@ function arrMerge(left, right){
   return result;
 
 };
-
-mergeSort([5,4,6,5,4]);
