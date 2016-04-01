@@ -113,6 +113,6 @@ SORTING ALGORITHMS
 
   iii. In My Own Words: Describe Best Case, Worst Case
 
-    Best Case Scenario:
+    Best Case Scenario: The merge sort algorithm's best scenario is if the array is categorized by an O(N) complexity because it has to compare each value against another, even though it breaks the original array into smaller pieces, it still compares them one at a time.
 
-    Worst Case Scenario:
+    Worst Case Scenario: The worst case scenario for the merge sort is
