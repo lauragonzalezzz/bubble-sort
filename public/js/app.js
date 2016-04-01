@@ -13,15 +13,15 @@ function createArrayBars(arr){
     var indvBar = document.createElement('div');
     indvBar.classList.add('indvBar');
     indvBar.innerHTML = arr[i];
-    indvBar.style.height = arr[i]*20 + "px";
+    indvBar.style.height = arr[i]*75 + "px";
     barsDiv.appendChild(indvBar);
   }
 };
-createArrayBars(myArray);
+// createArrayBars(myArray);
 
 // arrayOutput.innerHTML = bubbleSort(myArray);
 // contentDiv.appendChild(arrayOutput);
-
-setInterval(function(){
-  bubbleSort(myArray);
-}, 1000);
+bubbleSort(myArray);
+// setInterval(function(){
+//   bubbleSort(myArray);
+// }, 5000);

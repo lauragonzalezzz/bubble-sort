@@ -16,6 +16,7 @@ function bubbleSort(arr){
         bubbledArr[i + 1] = curr;
         moves++
         count += moves;
+        createArrayBars(bubbledArr);
       }
     }
     if (moves === 0){
