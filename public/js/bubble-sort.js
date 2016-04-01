@@ -7,7 +7,7 @@ function bubbleSort(arr){
 
   while(!isSwapped) {
     isSwapped = false;
-      var moves = 0;
+    var moves = 0;
     for(var i = 0; i < bubbledArr.length -1; i++){
       var curr = bubbledArr[i];
       var next = bubbledArr[i + 1];
@@ -31,7 +31,7 @@ Array.prototype.bubbleSort = function(){
   var isSwapped = false;
 
   while(!isSwapped) {
-    isSorted = false;
+    isSwapped = false;
       var moves = 0;
     for(var i = 0; i < this.length -1; i++){
       var curr = this[i];
