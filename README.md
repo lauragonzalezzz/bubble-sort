@@ -1,6 +1,6 @@
 SORTING ALGORITHMS
 
-1. Bubble Sort
+1. BUBBLE SORT
 
   i. ELI5 Explanation:
 
@@ -39,7 +39,7 @@ SORTING ALGORITHMS
       The Bubble Sort algorithm will have to make a swap for each number then, an additional pass to ensure no swaps have been made. Worst case complexity is O(N^2).
 
 
-2. Quick Sort
+2. QUICK SORT
 
   i. ELI5 Explanation:
 
@@ -74,3 +74,45 @@ SORTING ALGORITHMS
 
     Worst Case Scenario: the pivot is the smallest value or largest value each time
       The point of the pivot is to break the array up into smaller arrays which are each broken down until there is only one value in each array. If the pivot point is always the smallest or largest, the array is not broken down at all except for the pivot being removed. It takes O(N^2) complexity and takes the longest amount of time to complete.
+
+3. MERGE SORT
+
+  i. ELI5 Explanation:
+
+    Let's say you have a stack of small 4 boxes and you need to put them in order from lightest to heaviest, but you can only compare two at a time. You can perform a merge sort!
+    First you will split up the boxes into two stacks, then split each of those stacks into two stacks. Now you have 4 different stacks with one box each.
+    Pick up one box in each hand so you're holding two boxes, and compare which one is heavier. Put the heavier one on the right side, and the lighter one on the left side. Now do the same for the other two boxes. At this point you should have two sets of boxes with two boxes each.
+    Now compare each of the boxes that are on the left side of their piles, and put the lighter one in a new stack.
+    Compare the remaining left side box with the single right box, whichever is lighter will go in the stack in the new stack. Compare the last remaining boxes and add the lighter one to the new stack and then the last box. Now you've sorted the boxes by weight using a merge sort!
+
+  ii. Pseudo Code:
+
+    declare a quicksort function
+    declare a merge function after the quicksort function
+    set base case: if the array length is zero, return an empty array
+    set additional base case: if the array length is one, return the array
+    declare two variables set to empty arrays for the left and right side comparison
+    iterate over the array
+      if the index is even, push that value to the left side
+      if the index is odd, push that value to the right side
+    call the quicksort function on the left side
+    call the quicksort function on the right side
+    (this will break the array down into smaller arrays until each only has one value inside)
+    return the merge function with the left array and right array as arguments
+
+    enter the merge function
+      declare a variable set to an empty array for the final sorted array
+      create a while loop to continue while the left array and the right array are greater than zero
+        if the value of the left array at index 0 is greater than the value of the right array at index 0, push the value at the 0 index of the left array into the result array.
+        if the right one is less, push the right one into the array.
+      create a while loop to continue while left array is greater than zero
+        remove the first index of the array and push it into the resulting array
+      create a while loop for the right array as well
+        remove the first index and push it into the resulting array
+      return the result
+
+  iii. In My Own Words: Describe Best Case, Worst Case
+
+    Best Case Scenario:
+
+    Worst Case Scenario:
