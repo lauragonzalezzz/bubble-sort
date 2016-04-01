@@ -14,3 +14,33 @@ SORTING ALGORITHMS
 
   ii. Psuedo code:
 
+    myRandomArray = [4,5,2,1,3]
+
+    declare a bubble sort function
+      declare a boolean variable to gauge if the array is sorted, set to false
+      set a while loop to continue until the array is sorted
+        declare a variable to track the individual swaps performed, set to 0
+        iterate over the length of the array
+        declare a variable named 'current', set to # of iterations
+        declare a variable named 'next', set to # iterations + 1
+        if current is greater than next, swap current and next
+          increase number of swaps
+        if no swaps were performed, change boolean variable to true, which breaks the while loop
+    return the sorted array
+
+  iii. In My Own Words: Describe Best Case, Worst Case
+
+    Best Case Scenario: a sorted array
+      The Bubble Sort algorithm will make 2 passes, the first to see if any swaps need to be made, the second to be sure no swaps have been made.
+
+    Worst Case Scenario: an array with values that are each less than the next, a backwards sorted array
+      The Bubble Sort algorithm will have to make a swap for each number then, an additional pass to ensure no swaps have been made.
+
+
+2. Quick Sort
+
+  i. ELI5 Explanation:
+
+  ii. Psuedo Code:
+
+  iii. In My Own Words: Describe Best Case, Worst Case
