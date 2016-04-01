@@ -21,5 +21,6 @@ function selectionSort(arr){
       arr[smallest] = limbo;
     };  //Ends if statement 2
   }; //Ends for loop 1
+
   return arr;
 }; //Ends selection sort
