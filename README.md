@@ -132,7 +132,7 @@ SORTING ALGORITHMS
 
     declare an insertion sort function
     iterate through the array
-      declare a 'current' variable set to the array value at index i
+      declare a 'current' variable set to the array value at index number of iterations (i)
       declare a 'previous' variable set to the array value at index i - 1
       set a while loop to continue while the number 'previous' is greater than 0 and the value of the array at index 'previous' is greater than the value at the 'current' index
         set the value of array index previous + 1 to the value of the 'previous' position
@@ -145,3 +145,28 @@ SORTING ALGORITHMS
     Best Case Scenario: The best scenario for insertion sort is an already sorted list; it will not need to move any of the elements and will only need to make one pass through the list. This is categorized as an O(logN) complexity because it will only need to go through the list one time per value in the arary.
 
     Worst Case Scenario: The worst case scenario for the insertion sort is a backwards sorted array because it has to shift each value for every value in the array, making it an O(N^2) complexity.
+
+5. SELECTION SORT
+
+  i. ELI5 Explanation:
+
+    [green, red, yellow, orange, purple, blue]
+
+    We can use selection sort to arrage the colors of the rainbow correctly.
+    Green is first in the list, so we will compare green to the other colors to see which color is first in the rainbow. Although red is the very next color, we will check through every color to be sure red comes first. Red is first so now we have red and green switch places and we leave red alone now. Now we check through the list again and find the next color, orange. Now green and orange switch places, and we leave orange alone. Continue this through the list until all of the colors are in order. Remember, sometimes you will have to make a color switch places multiple times.
+
+  ii. Pseudo Code:
+
+    declare a selection sort function
+      iterate through the array
+        assign a variable named 'smallest' to the number of iterations (i)
+        create another iteration loop through the array but assign this iterator to the value of the outer iterative loop's number of iterations (I called it 'comp', short for comparison, i + 1)
+          if the array at index 'comp' is less than the array at index 'smallest', the number smallest becomes the number comp
+        if smallest is not equal to i, swap array value at index[i] and array value at index 'smallest'
+    return the array
+
+  iii. In My Own Words: Describe Best Case, Worst Case:
+
+    Best Case Scenario: The array is backwards sorted so each pass will put two elements in their correct place each time. However, the array still has to be iterated through again for each element. While it doesn't have to sort through the entire array each time, it only reduces the iteration by one element per iteration making it an O(N^2) complexity.
+
+    Worst Case Scenario: The array has the largest element first, then the remainder of the array is sorted. The algorithm would have to switch two elements for each pass through the array but would not be getting the logN complexity of allowing the largest element (if sorting smallest to largest) to be placed at the end of the array and then setting it aside such as with the smallest elements, it would only move one spot to the right. This would be an O(N^2) complexity as well.
