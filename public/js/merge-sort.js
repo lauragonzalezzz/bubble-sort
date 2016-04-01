@@ -37,6 +37,7 @@ function arrMerge(left, right){
   while (left.length > 0 && right.length > 0){
     if (left[0] <= right[0]){
       var lshifted = left.shift();
+      console.log('left',left);
       result.push(lshifted);
     }
     else {
@@ -57,3 +58,5 @@ function arrMerge(left, right){
   return result;
 
 };
+
+mergeSort([5,4,6,5,4]);
