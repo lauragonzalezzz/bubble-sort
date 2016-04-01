@@ -6,7 +6,7 @@ function bubbleSort(arr){
   var count = 0;
 
   while(!isSwapped) {
-    isSorted = false;
+    isSwapped = false;
       var moves = 0;
     for(var i = 0; i < bubbledArr.length -1; i++){
       var curr = bubbledArr[i];
