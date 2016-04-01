@@ -115,4 +115,33 @@ SORTING ALGORITHMS
 
     Best Case Scenario: The merge sort algorithm's best scenario is if the array is categorized by an O(N) complexity because it has to compare each value against another, even though it breaks the original array into smaller pieces, it still compares them one at a time.
 
-    Worst Case Scenario: The worst case scenario for the merge sort is
+    Worst Case Scenario: The worst case scenario complexity level is also at O(N) because it will compare each number with another number from the set for every value in the array.
+
+4. INSERTION SORT
+
+  i. ELI5 Explanation:
+
+    [Jun,May,Apr,Mar,Feb,Jan,Dec,Nov,Oct,Sep,Aug,Jul]
+
+    Let's say you have a list of the months of the year but they're all mixed up and you want to put them in order.
+    First you'll look at which is first in line, June. Since there aren't any in front of June, June stays in place.
+    Next you'll look at May and pull it out of the line, leaving an empty space where May was. Since May comes before June, June moves over into the space where May was and May goes into the space where June was.
+    Now you'll look at April; pull April out of the list, leaving an empty space. Since April comes before June, June takes the space where April was. Now compare April to May; since April comes first, May scoots over into the space where June was, and now April takes the space where May was. Continue down the line until all of the months are in order. Now you've performed an insertion sort!
+
+  ii. Psuedo Code:
+
+    declare an insertion sort function
+    iterate through the array
+      declare a 'current' variable set to the array value at index i
+      declare a 'previous' variable set to the array value at index i - 1
+      set a while loop to continue while the number 'previous' is greater than 0 and the value of the array at index 'previous' is greater than the value at the 'current' index
+        set the value of array index previous + 1 to the value of the 'previous' position
+        decrement previous by 1
+      set the value of array index previous + 1 to the value of the 'current' index
+    return the array
+
+  iii. In My Own Words: Describe Best Case, Worst Case:
+
+    Best Case Scenario: The best scenario for insertion sort is an already sorted list; it will not need to move any of the elements and will only need to make one pass through the list. This is categorized as an O(logN) complexity because it will only need to go through the list one time per value in the arary.
+
+    Worst Case Scenario: The worst case scenario for the insertion sort is a backwards sorted array because it has to shift each value for every value in the array, making it an O(N^2) complexity.
