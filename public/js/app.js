@@ -1,4 +1,4 @@
-var myArray = [4,3,2,1,5,6];
+var myArray = [9,3,2,8,5,6,4,10,7,1];
 
 var contentDiv = document.getElementById('content');
 var arrayOutput = document.createElement('div');
@@ -13,6 +13,7 @@ function createArrayBars(arr){
     var indvBar = document.createElement('div');
     indvBar.classList.add('indvBar');
     indvBar.innerHTML = arr[i];
+    indvBar.style.height = arr[i]*20 + "px";
     barsDiv.appendChild(indvBar);
   }
 };
